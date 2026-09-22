@@ -3,93 +3,97 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Privacy Policy - Trainko</title>
-    <link rel="stylesheet" href="legal.css">
+    <title>Privacy Policy — Trainko</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Privacy Policy</h1>
-    <p class="meta">Last updated: September 22, 2026</p>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back</a>
 
-    <h2>1. Introduction</h2>
-    <p>
-        Welcome to <strong>Trainko</strong> (hereinafter referred to as "the App"). We take your privacy and the protection of your personal information very seriously.
-        This Privacy Policy explains how we collect, use, store, and protect your information when you use the App and its local HTTP service.
-    </p>
-    <p>
-        Please read this policy carefully. By using the App, you acknowledge that you have read and agree to the terms of this policy.
-        If you have any questions, please contact us (see Section 9).
-    </p>
+        <div class="legal-header">
+            <h1>Privacy Policy</h1>
+            <p class="meta">Last updated: September 22, 2026</p>
+        </div>
 
-    <h2>2. Information We Process</h2>
-    <p>
-        The App is designed with a "local-first" principle. The vast majority of your data is stored only on your device and is never uploaded to any cloud server.
-        The personal information we may process includes:
-    </p>
+        <div class="section">
+            <h2>1. Introduction</h2>
+            <p>Welcome to <strong>Trainko</strong> ("the App"). We take your privacy and personal data protection very seriously. This Privacy Policy explains how we collect, use, store, and protect your information when you use the App and its local HTTP service.</p>
+            <p>Please read this policy carefully. By using the App, you acknowledge that you have read and agree to the terms of this policy. If you have any questions, please contact us (see Section 9).</p>
+        </div>
 
-    <h3>2.1 Training & Body Data</h3>
-    <ul>
-        <li>Training plans, workout records, and exercise data entered by you or written by your AI Agent via API;</li>
-        <li>Basic body information such as weight, height, sex, and date of birth;</li>
-        <li>Training session data including duration, sets, reps, and weight.</li>
-    </ul>
+        <div class="section">
+            <h2>2. Information We Process</h2>
+            <p>The App is designed with a "local-first" principle. The vast majority of your data is stored only on your device and is never uploaded to any cloud server.</p>
 
-    <h3>2.2 Apple Health (HealthKit) Data</h3>
-    <p>
-        When you enable "Auto Sync" and grant permission, the App interacts with Apple Health as follows:
-    </p>
-    <ul>
-        <li><strong>Read</strong>: Body weight, height, body fat percentage, heart rate, sex, and date of birth — to enhance your training profile;</li>
-        <li><strong>Write</strong>: Body weight, active energy, heart rate, and workout records — to sync your training results back to Apple Health.</li>
-    </ul>
-    <p>
-        All HealthKit access requires your explicit authorization through the system permission dialog. You can revoke access at any time in Settings > Privacy & Security > Health.
-    </p>
+            <h3>2.1 Training &amp; Body Data</h3>
+            <ul>
+                <li>Training plans, workout records, and exercise data entered by you or written by your AI Agent via API</li>
+                <li>Basic body information such as weight, height, sex, and date of birth</li>
+                <li>Training session data including duration, sets, reps, and weight</li>
+            </ul>
 
-    <h2>3. Data Storage & Security</h2>
-    <ul>
-        <li><strong>Local Storage</strong>: Your training and body data is stored in a local SwiftData database on your device. Some preferences are stored in system UserDefaults.</li>
-        <li><strong>No Cloud Servers</strong>: The App does not have a cloud account system and does not upload your personal data to any third-party servers.</li>
-        <li><strong>API Key</strong>: The API Key used for local HTTP service authentication is generated and securely stored on your device. It is only used for communication between your configured AI Agent and the App.</li>
-        <li><strong>Data Isolation</strong>: iCloud sync is not currently enabled. We do not proactively sync your data to iCloud.</li>
-    </ul>
+            <h3>2.2 Apple Health (HealthKit) Data</h3>
+            <p>When you enable "Auto Sync" and grant permission, the App interacts with Apple Health:</p>
+            <ul>
+                <li><strong>Read:</strong> Body weight, height, body fat percentage, heart rate, sex, and date of birth — to enhance your training profile</li>
+                <li><strong>Write:</strong> Body weight, active energy, heart rate, and workout records — to sync your training results back to Apple Health</li>
+            </ul>
+            <p>All HealthKit access requires your explicit authorization. You can revoke access at any time in Settings → Privacy &amp; Security → Health.</p>
+        </div>
 
-    <h2>4. Local HTTP Service & API Key</h2>
-    <p>
-        The App includes a local HTTP service that runs only on your device, allowing your configured AI Agent to create personalized training plans via API.
-    </p>
-    <ul>
-        <li>The service listens on the local address only. An API Key is required for access.</li>
-        <li>The API Key is used exclusively between your device and your AI Agent. Do not share it with others.</li>
-        <li>If you suspect the key has been compromised, you can regenerate it at any time in Settings. The old key will be immediately invalidated.</li>
-    </ul>
+        <div class="section">
+            <h2>3. Data Storage &amp; Security</h2>
+            <ul>
+                <li><strong>Local Storage:</strong> Your training and body data is stored in a local SwiftData database on your device</li>
+                <li><strong>No Cloud Servers:</strong> The App does not have a cloud account system and does not upload your personal data to any third-party servers</li>
+                <li><strong>API Key:</strong> The API Key for local HTTP service authentication is generated and securely stored on your device, used only for communication between your AI Agent and the App</li>
+                <li><strong>Data Isolation:</strong> iCloud sync is not currently enabled. We do not proactively sync your data to iCloud</li>
+            </ul>
+        </div>
 
-    <h2>5. Third-Party Data Access</h2>
-    <p>
-        Apart from Apple Health (HealthKit), the App does not integrate any third-party SDKs and does not provide your data to any third party for advertising, profiling, or any other commercial purpose.
-    </p>
+        <div class="section">
+            <h2>4. Local HTTP Service &amp; API Key</h2>
+            <p>The App includes a local HTTP service that runs only on your device, allowing your configured AI Agent to create personalized training plans via API.</p>
+            <ul>
+                <li>The service listens on the local address only. An API Key is required for access</li>
+                <li>The API Key is used exclusively between your device and your AI Agent. Do not share it with others</li>
+                <li>If you suspect the key has been compromised, you can regenerate it at any time in Settings</li>
+            </ul>
+        </div>
 
-    <h2>6. Data Deletion</h2>
-    <ul>
-        <li>You can delete all data stored by the App in Settings > Data Management > Clear All Data.</li>
-        <li>Uninstalling the App will also delete all data stored on your device (historical records in Apple Health are not affected).</li>
-        <li>To revoke Apple Health permissions, go to system Settings > Privacy & Security > Health.</li>
-    </ul>
+        <div class="section">
+            <h2>5. Third-Party Data Access</h2>
+            <p>Apart from Apple Health (HealthKit), the App does not integrate any third-party SDKs and does not provide your data to any third party for advertising, profiling, or any other commercial purpose.</p>
+        </div>
 
-    <h2>7. Children's Privacy</h2>
-    <p>
-        The App is designed for general adult fitness use. If you are under 18 years of age, please use the App under the guidance of a guardian and ensure that you have obtained their consent.
-    </p>
+        <div class="section">
+            <h2>6. Data Deletion</h2>
+            <ul>
+                <li>You can delete all data in Settings → Data Management → Clear All Data</li>
+                <li>Uninstalling the App also deletes all data on your device (Apple Health records are not affected)</li>
+                <li>To revoke Apple Health permissions, go to Settings → Privacy &amp; Security → Health</li>
+            </ul>
+        </div>
 
-    <h2>8. Changes to This Policy</h2>
-    <p>
-        We may update this policy from time to time in accordance with changes in laws or product features. Updated policies will be published within the App and take effect from the date of publication.
-        We recommend that you review this policy periodically.
-    </p>
+        <div class="section">
+            <h2>7. Children's Privacy</h2>
+            <p>The App is designed for general adult fitness use. If you are under 18, please use the App under the guidance of a guardian and ensure that you have obtained their consent.</p>
+        </div>
 
-    <h2>9. Contact Us</h2>
-    <p>
-        If you have any questions, comments, or suggestions regarding this Privacy Policy or how we handle personal information, please contact us at:
-    </p>
-    <p><strong>trainko.app@gmail.com</strong></p>
+        <div class="section">
+            <h2>8. Changes to This Policy</h2>
+            <p>We may update this policy from time to time. Updated policies will be published within the App and take effect from the date of publication. We recommend reviewing this policy periodically.</p>
+        </div>
+
+        <div class="section">
+            <h2>9. Contact Us</h2>
+            <p>If you have any questions, comments, or suggestions regarding this Privacy Policy, please contact us at:</p>
+            <p><a class="contact-email" href="mailto:trainko.app@gmail.com">trainko.app@gmail.com</a></p>
+        </div>
+
+        <div class="footer">
+            <p><a href="index.html">← Trainko Support</a></p>
+        </div>
+    </div>
 </body>
 </html>
