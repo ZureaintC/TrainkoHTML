@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainko - Support</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+            background: #000;
+            color: #f5f5f7;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+        .logo { font-size: 48px; margin-bottom: 8px; }
+        h1 {
+            font-size: 36px; font-weight: 700; margin-bottom: 6px;
+            background: linear-gradient(135deg, #FF6B35, #FF9F1C);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .tagline { font-size: 18px; color: #86868b; margin-bottom: 48px; }
+        h2 { font-size: 24px; font-weight: 600; margin-top: 48px; margin-bottom: 16px; }
+        p, li { font-size: 16px; color: #d2d2d7; margin-bottom: 12px; }
+        a { color: #FF6B35; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .card { background: #1d1d1f; border-radius: 16px; padding: 24px; margin: 24px 0; }
+        .card h3 { font-size: 18px; margin-bottom: 8px; }
+        .card p { margin-bottom: 0; color: #a1a1a6; }
+        .contact-email { font-size: 20px; color: #FF6B35; font-weight: 600; }
+        ul { list-style: none; padding: 0; }
+        ul li::before { content: "\2022"; color: #FF6B35; font-weight: bold; margin-right: 8px; }
+        .footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid #333; color: #86868b; font-size: 14px; }
+        .lang-switch { position: fixed; top: 16px; right: 16px; font-size: 14px; z-index: 10; }
+        .lang-switch a { color: #86868b; margin-left: 8px; padding: 4px 10px; border: 1px solid #444; border-radius: 8px; cursor: pointer; }
+        .lang-switch a.active { color: #FF6B35; border-color: #FF6B35; }
+    </style>
+</head>
+<body>
+    <div class="lang-switch">
+        <a href="#" onclick="setLang('en')" id="btn-en">EN</a>
+        <a href="#" onclick="setLang('zh')" id="btn-zh">中文</a>
+    </div>
+
+    <div class="container">
+        <div class="logo">🏋️</div>
+        <h1>Trainko</h1>
+        <p class="tagline" data-en="AI Personal Trainer — Let AI plan, you train." data-zh="AI 私人教练 — AI 负责想，你负责练。"></p>
+
+        <h2 data-en="Support" data-zh="技术支持"></h2>
+        <p data-en="Need help with Trainko? We're here for you." data-zh="使用 Trainko 遇到问题？我们随时为你服务。"></p>
+
+        <div class="card">
+            <h3 data-en="📧 Contact Us" data-zh="📧 联系我们"></h3>
+            <p data-en="For technical support, bug reports, or feature requests:" data-zh="技术支持、问题反馈或功能建议："></p>
+            <br>
+            <a class="contact-email" href="mailto:trainko.app@gmail.com">trainko.app@gmail.com</a>
+        </div>
+
+        <h2 data-en="FAQ" data-zh="常见问题"></h2>
+
+        <div class="card">
+            <h3 data-en="How does Trainko work?" data-zh="Trainko 是如何工作的？"></h3>
+            <p data-en="Trainko provides an API that any AI agent (ChatGPT, Claude, etc.) can use to create personalized training plans. The app handles workout execution, timing, and tracking — while AI handles the planning."
+               data-zh="Trainko 提供 API 接口，任何 AI 助手（ChatGPT、Claude 等）都可以通过 API 创建个性化训练计划。App 负责训练引导、计时和记录，AI 负责规划。"></p>
+        </div>
+
+        <div class="card">
+            <h3 data-en="Do I need an account?" data-zh="需要注册账号吗？"></h3>
+            <p data-en="No. Trainko works entirely on-device. All your training data is stored locally on your iPhone. No registration or cloud account required."
+               data-zh="不需要。Trainko 完全在设备本地运行，所有训练数据保存在你的 iPhone 上，无需注册或云账号。"></p>
+        </div>
+
+        <div class="card">
+            <h3 data-en="Does Apple Watch work without iPhone?" data-zh="Apple Watch 可以脱离 iPhone 使用吗？"></h3>
+            <p data-en="Currently, Apple Watch acts as a companion to your iPhone. It needs to be paired with an iPhone running Trainko to display and control workouts."
+               data-zh="目前 Apple Watch 作为 iPhone 的伴侣设备使用，需要与安装了 Trainko 的 iPhone 配对才能显示和控制训练。"></p>
+        </div>
+
+        <div class="card">
+            <h3 data-en="Which AI agents are supported?" data-zh="支持哪些 AI 助手？"></h3>
+            <p data-en="Any AI agent that can make HTTP API calls — including ChatGPT (via Actions/GPTs), Claude (via MCP/tools), custom bots, and more. Trainko provides a local API endpoint for plan submission."
+               data-zh="任何能发起 HTTP API 调用的 AI 助手都支持，包括 ChatGPT（通过 Actions/GPTs）、Claude（通过 MCP/tools）、自定义 Bot 等。Trainko 提供本地 API 接口用于接收训练计划。"></p>
+        </div>
+
+        <div class="card">
+            <h3 data-en="What languages are supported?" data-zh="支持哪些语言？"></h3>
+            <p data-en="Trainko supports 17 languages: English, 简体中文, 繁體中文, 日本語, 한국어, Español, Français, Deutsch, Italiano, Português (BR), Русский, العربية, Čeština, Magyar, Polski, Türkçe, and Español (Latinoamérica)."
+               data-zh="Trainko 支持 17 种语言：简体中文、English、繁體中文、日本語、한국어、Español、Français、Deutsch、Italiano、Português (BR)、Русский、العربية、Čeština、Magyar、Polski、Türkçe、Español (LA)。"></p>
+        </div>
+
+        <div>
+            <h2 data-en="Legal" data-zh="法律条款"></h2>
+
+            <div class="card">
+                <h3 data-en="📄 Privacy Policy" data-zh="📄 隐私政策"></h3>
+                <p><a href="privacy.html">English</a> · <a href="privacy-zh.html">中文</a></p>
+            </div>
+
+            <div class="card">
+                <h3 data-en="📋 Terms of Service" data-zh="📋 用户协议"></h3>
+                <p><a href="agreement.html">English</a> · <a href="agreement-zh.html">中文</a></p>
+            </div>
+
+            <p data-en="Trainko respects your privacy. All training data is stored locally on your device. No accounts, no cloud, no tracking."
+               data-zh="Trainko 尊重你的隐私。所有训练数据保存在设备本地，无需账号，无云端存储，无任何追踪。"></p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024-2026 Trainko. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        function detectLang() {
+            var saved = localStorage.getItem('trainko-lang');
+            if (saved) return saved;
+            var nav = navigator.language || navigator.userLanguage || 'en';
+            return nav.toLowerCase().startsWith('zh') ? 'zh' : 'en';
+        }
+
+        function setLang(lang) {
+            localStorage.setItem('trainko-lang', lang);
+            applyLang(lang);
+            return false;
+        }
+
+        function applyLang(lang) {
+            document.querySelectorAll('[data-en]').forEach(function(el) {
+                el.textContent = el.getAttribute('data-' + lang) || el.getAttribute('data-en');
+            });
+            document.getElementById('btn-en').className = (lang === 'en') ? 'active' : '';
+            document.getElementById('btn-zh').className = (lang === 'zh') ? 'active' : '';
+            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+        }
+
+        applyLang(detectLang());
+    </script>
+</body>
+</html>
