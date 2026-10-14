@@ -12,83 +12,145 @@
 
         <div class="legal-header">
             <h1>隐私政策</h1>
-            <p class="meta">最后更新：2026 年 9 月 22 日</p>
+            <p class="meta">最后更新：2026 年 10 月 15 日</p>
         </div>
 
         <div class="section">
             <h2>一、引言</h2>
-            <p>欢迎使用 <strong>Trainko</strong>（以下简称「本 App」）。我们非常重视你的隐私和个人信息保护。本隐私政策旨在向你说明，在你使用本 App 及其本地 HTTP 服务时，我们如何收集、使用、存储和保护你的信息。</p>
-            <p>请你仔细阅读并充分理解本政策。你开始使用本 App，即视为你已阅读并同意本政策的全部内容。如有疑问，可联系我们（见第九条）。</p>
+            <p>
+                欢迎使用 <strong>Trainko</strong>（以下简称"本 App"）。我们非常重视您的隐私和个人信息保护。
+                本隐私政策旨在向您说明，在您使用本 App 及其本地 HTTP 服务、Apple 健康同步、Apple Watch 伴侣应用、实时活动与小组件、iCloud 云同步以及会员订阅服务时，我们如何处理和保护您的个人信息。
+            </p>
+            <p>
+                请您仔细阅读并充分理解本政策。您开始使用本 App，即视为您已阅读并同意本政策的全部内容。
+            </p>
         </div>
 
         <div class="section">
-            <h2>二、我们收集的信息</h2>
-            <p>本 App 以「本地优先」为设计原则，你的绝大部分数据仅存储在你的设备上，不会被上传到任何云端服务器。</p>
+            <h2>二、我们处理的信息</h2>
+            <p>
+                本 App 贯彻"本地优先、数据最小化"的原则。除非您作为会员主动开启多设备 iCloud 云同步，否则您的所有个人健康与训练数据均仅加密保存在您的设备本地，绝不上载至任何第三方云端服务器。我们处理的信息包括：
+            </p>
 
-            <h3>1. 训练与身体数据</h3>
+            <h3>1. 训练与身体档案数据</h3>
             <ul>
-                <li>你手动录入或通过 AI Agent 写入的训练计划、训练记录、动作数据</li>
-                <li>你的基础身体资料，如体重、身高、性别、出生日期等</li>
-                <li>训练过程中记录的时长、组数、次数、重量等过程数据</li>
+                <li>您手动录入或由您配置的 AI Agent 写入的每日训练计划、动作库、完成组数、重量、次数、间歇计时及训练日志；</li>
+                <li>您的基础身体资料，包括性别、体重、身高、体脂率、出生日期；</li>
+                <li>您登记的健身房器械配置与个性化重量档位选项。</li>
             </ul>
 
-            <h3>2. Apple 健康（HealthKit）数据</h3>
-            <p>在你主动开启「自动同步」并授权后，本 App 会与 Apple 健康应用交互：</p>
+            <h3>2. Apple 健康（HealthKit）与 Apple Watch 传感器数据</h3>
+            <p>
+                在您主动开启"自动同步"并通过系统授权后，本 App 会与 Apple 健康应用及 Apple Watch 进行交互：
+            </p>
             <ul>
-                <li><strong>读取：</strong>体重、身高、体脂率、心率、性别、出生日期，用于完善你的训练档案</li>
-                <li><strong>写入：</strong>体重、活动能量、心率以及训练记录，用于将你的训练成果回写至健康应用</li>
+                <li><strong>读取权限</strong>：体重、身高、体脂率、实时心率、性别及出生日期，用于自动完善训练档案并展示实时心率区间；</li>
+                <li><strong>写入权限</strong>：活动能量（卡路里消耗）、训练心率及训练记录（HKWorkoutSession），将训练成果回写至系统健康应用；</li>
+                <li><strong>Apple Watch 独立伴侣训练</strong>：Watch 端在训练期间采集的心率与卡路里数据，通过系统 WatchConnectivity 或 HealthKit 与您的 iPhone 进行本地近场或加密同步，<strong>绝不经由任何开发者服务器中转</strong>。</li>
             </ul>
-            <p>对健康数据的读取与写入均需你通过系统授权页面主动授权，你可随时在「设置 → 隐私与安全 → 健康」中关闭授权。</p>
+            <p>
+                我们严格遵守 Apple 开发者政策：<strong>绝不将 HealthKit 数据用于商业广告、用户画像或提供给任何第三方数据机构</strong>。您可随时在 iOS 系统<strong>"设置 → 隐私与安全性 → 健康 → Trainko"</strong>中关闭授权。
+            </p>
+
+            <h3>3. 实时活动（Live Activity）与锁屏/桌面小组件（Widget）</h3>
+            <ul>
+                <li>训练执行期间，本 App 通过 ActivityKit 在灵动岛与锁屏上呈现动作名称、组数与组间休息倒计时；</li>
+                <li>上述状态仅在您设备系统屏幕本地渲染显示，锁屏敏感信息展示遵循您在 iOS 系统<strong>"设置 → 面容 ID 与密码 → 锁定时允许访问"</strong>中的隐私保护配置。</li>
+            </ul>
+
+            <h3>4. 应用内购买与订阅交易凭据</h3>
+            <p>
+                当您开通 Trainko 会员时，所有支付交易均由 Apple App Store（StoreKit 2）在系统层面直接处理：
+            </p>
+            <ul>
+                <li>本 App 开发者<strong>绝不收集、不访问、也不存储您的银行卡号、信用卡信息、账单地址或任何个人金融敏感信息</strong>；</li>
+                <li>本 App 仅在本地接收由 Apple 官方签发并加密的 JWS 交易凭证（Transaction），仅用于本地校验您的会员订阅状态（如会员有效期、当前方案与自动续费状态）。</li>
+            </ul>
+
+            <h3>5. iCloud 云同步数据（仅限会员开启时）</h3>
+            <p>
+                当您作为会员主动开启"iCloud 云同步"时，您的训练记录和个人配置将通过 Apple CloudKit 技术在您登录相同 Apple ID 的设备间无缝同步：
+            </p>
+            <ul>
+                <li>所有数据均直接保存在属于您个人的<strong>私有 iCloud 数据库（Private CloudKit Database）</strong>中；</li>
+                <li>数据传输与存储全程受 Apple 端到端加密或传输层加密保护，<strong>本 App 开发者在技术上无法访问、解密或读取您的私人云端数据</strong>；</li>
+                <li>您可以随时在 App 内设置中关闭 iCloud 云同步。</li>
+            </ul>
         </div>
 
         <div class="section">
             <h2>三、数据的存储与安全</h2>
             <ul>
-                <li><strong>本地存储：</strong>训练与身体数据保存在设备本地的 SwiftData 数据库中，部分偏好设置保存在系统 UserDefaults 中</li>
-                <li><strong>无云端服务器：</strong>本 App 不设置云账号体系，不将你的个人数据上传至任何第三方服务器</li>
-                <li><strong>API Key：</strong>用于本地 HTTP 服务鉴权的 API Key 在你的设备上本地生成并安全保存，仅用于你配置的 AI Agent 与本 App 之间的通信</li>
-                <li><strong>数据隔离：</strong>iCloud 同步功能当前尚未开放，我们不会主动将你的数据同步至 iCloud</li>
+                <li><strong>本地存储</strong>：您的训练数据保存在设备本地的 SwiftData 数据库中，偏好设置保存在系统 UserDefaults 中；</li>
+                <li><strong>无自建外部服务器</strong>：本 App 不设中心化用户数据库，不设后台用户账户系统，杜绝了中心化服务器数据泄露的风险；</li>
+                <li><strong>API Key 安全</strong>：本地 HTTP 服务的鉴权密钥在您设备本地安全沙盒中生成与存储，仅用于您配置的 AI Agent 与本地服务之间的授权交互。</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>四、本地 HTTP 服务与 API Key</h2>
-            <p>本 App 内置仅在本机运行的本地 HTTP 服务，供你配置的 AI Agent 通过 API 定制训练计划。</p>
+            <h2>四、本地 HTTP 服务隐私说明</h2>
+            <p>
+                本 App 内置的 HTTP 服务仅监听本机环回地址（localhost），专供您在本地与您受信任的 AI Agent 交互。
+            </p>
             <ul>
-                <li>该服务默认仅监听本机地址，需持有 API Key 才能访问</li>
-                <li>API Key 仅在你的设备与你的 AI Agent 之间使用，请勿泄露给他人</li>
-                <li>如担心 Key 泄露，可随时在「设置」中重新生成，旧 Key 将立即失效</li>
+                <li>该服务需要有效的 API Key 方能通信，请勿将 API Key 泄露给不受信任的第三方；</li>
+                <li>如怀疑密钥泄露，您可随时在 App"设置"中一键重新生成，旧密钥将瞬间彻底失效；</li>
+                <li>您可以在 App「设置 → API 服务」中随时关闭本地 HTTP 服务。</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>五、第三方数据访问</h2>
-            <p>除 Apple 健康（HealthKit）外，本 App 不接入其他第三方 SDK，也不会将你的数据提供给任何第三方用于广告、画像或其他商业目的。</p>
+            <h2>五、战报图片导出与第三方分享</h2>
+            <p>
+                本 App 提供的训练卡片与周期战报导出图片均在本地离线渲染生成。若您主动将其保存至系统相册或分享至社交媒体，请注意图片中包含您的个人锻炼指标与时间轨迹，该分享行为属于您的自主公开行为。
+            </p>
         </div>
 
         <div class="section">
-            <h2>六、数据的删除</h2>
+            <h2>六、第三方共享与 SDK</h2>
+            <p>
+                本 App 恪守极简与隐私原则：
+            </p>
             <ul>
-                <li>你可在「设置 → 数据管理 → 清除所有数据」中删除本 App 保存的全部数据</li>
-                <li>卸载本 App 会一并删除设备上的数据（Apple 健康中的历史记录不受影响）</li>
-                <li>如需撤回 Apple 健康授权，请在「设置 → 隐私与安全 → 健康」中操作</li>
+                <li>除系统原生的 Apple HealthKit、WatchConnectivity、ActivityKit、CloudKit 与 StoreKit 外，<strong>本 App 不集成任何第三方商业广告 SDK、追踪分析 SDK 或行为画像工具</strong>；</li>
+                <li>我们不会将您的个人数据提供、出售、出租或分享给任何第三方。</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>七、未成年人保护</h2>
-            <p>本 App 面向一般成年人健身场景。若你为未满 18 周岁的未成年人，请在监护人指导下使用并确保已征得监护人同意。</p>
+            <h2>七、数据主体权利</h2>
+            <p>
+                您对您的个人数据拥有完全的自主控制权：
+            </p>
+            <ul>
+                <li><strong>查阅与修改</strong>：随时可在 App 内查看或修改动作库、身体指标及健身房配置；</li>
+                <li><strong>删除数据</strong>：支持在列表中左滑单条删除记录，或在设置中一键清空全部历史记录；</li>
+                <li><strong>导出数据</strong>：会员可通过备份功能将全部训练数据导出为本地加密文件（.tkbk）。</li>
+            </ul>
         </div>
 
         <div class="section">
-            <h2>八、本政策的变更</h2>
-            <p>我们可能根据法律法规或产品功能的变化适时更新本政策。更新后的政策将在本 App 内公示，并自公示之日起生效。建议你定期查阅。</p>
+            <h2>八、未成年人隐私保护</h2>
+            <p>
+                本 App 主要面向具备完全民事行为能力的成年健身爱好者。若您未满 18 周岁，请在监护人指导与陪同下审阅本政策并在确保运动安全的前提下使用本 App。
+            </p>
         </div>
 
         <div class="section">
-            <h2>九、联系我们</h2>
-            <p>如你对本隐私政策或个人信息处理有任何疑问、意见或建议，请联系：</p>
-            <p><a class="contact-email" href="mailto:trainko.app@gmail.com">trainko.app@gmail.com</a></p>
+            <h2>九、隐私政策的修订</h2>
+            <p>
+                我们可能会适时修订本隐私政策。更新后的版本将在本 App 内公布并注明最新更新日期。
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>十、联系我们</h2>
+            <p>
+                如您对本隐私政策有任何疑问、意见或投诉，可通过以下方式与开发者取得联系：
+            </p>
+            <p>
+                电子邮件：<a href="mailto:trainko.app@gmail.com">trainko.app@gmail.com</a>
+            </p>
         </div>
 
         <div class="footer">

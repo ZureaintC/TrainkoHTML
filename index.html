@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trainko — AI 负责想，你负责练</title>
+    <title>Trainko — AI 负责想 · 你负责练</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,12 +13,102 @@
     </div>
 
     <div class="container">
+        <!-- Hero Header -->
         <div class="header">
             <span class="icon">🏋️</span>
             <h1>Trainko</h1>
-            <p class="tagline" data-en="Let AI plan, you train." data-zh="AI 负责想，你负责练。"></p>
+            <p class="tagline" data-en="Let AI plan, you train." data-zh="AI 负责想 · 你负责练"></p>
+            <div class="hero-badges">
+                <span class="badge accent" data-en="🤖 Open Local API" data-zh="🤖 开放本地 API"></span>
+                <span class="badge" data-en="🔒 Local First & Private" data-zh="🔒 本地优先 · 纯粹隐私"></span>
+                <span class="badge" data-en="⌚️ Apple Watch Companion" data-zh="⌚️ Apple Watch 独立伴侣"></span>
+                <span class="badge" data-en="🌍 17 Languages" data-zh="🌍 17 种语言原生支持"></span>
+            </div>
         </div>
 
+        <!-- How it works -->
+        <h2 data-en="How It Works" data-zh="工作原理"></h2>
+        <div class="step-item">
+            <div class="step-number">1</div>
+            <div class="step-content">
+                <h3 data-en="Connect Any AI Agent" data-zh="连接任意 AI 助手"></h3>
+                <p data-en="Connect ChatGPT, Claude, Workbuddy, Coze, or your custom private agent to Trainko's built-in local HTTP API."
+                   data-zh="将 ChatGPT、Claude、Workbuddy、Coze 或你自建部署的 AI 助手连接至 Trainko 内置的轻量本地 HTTP API。"></p>
+            </div>
+        </div>
+        <div class="step-item">
+            <div class="step-number">2</div>
+            <div class="step-content">
+                <h3 data-en="Receive Tailored Daily Plans" data-zh="接收专属定制计划"></h3>
+                <p data-en="Your AI generates executable workouts tailored to your exact gym equipment, progressive overload targets, and recovery state."
+                   data-zh="AI 助手根据你的实际健身房器械条件、负荷目标和体能恢复状态，通过 API 下发 100% 可落地的专业训练计划。"></p>
+            </div>
+        </div>
+        <div class="step-item">
+            <div class="step-number">3</div>
+            <div class="step-content">
+                <h3 data-en="Focus on Every Push" data-zh="沉浸执行，专注推举"></h3>
+                <p data-en="Trainko handles the rest: immersive set guidance, auto rest countdowns, Lock Screen Live Activities, and Apple Watch companion logging."
+                   data-zh="Trainko 负责后续的一切：沉浸式动作指导、自动组间间歇计时、灵动岛锁屏实时活动以及 Apple Watch 手腕记录。"></p>
+            </div>
+        </div>
+
+        <!-- Core Features -->
+        <h2 data-en="Core Features" data-zh="核心特性"></h2>
+        <div class="grid-2">
+            <div class="feature-card">
+                <span class="feature-icon">🔌</span>
+                <h3 data-en="Open Local API" data-zh="开放本地 HTTP API"></h3>
+                <p data-en="Built-in on-device server. Any HTTP-capable AI assistant can create daily plans, log workouts, and query stats with ease."
+                   data-zh="内置设备级本地 HTTP 服务器。任何具备 HTTP 能力的 AI 均可一键读取与写入每日计划，并在设置中支持随时启停。"></p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🏋️‍♂️</span>
+                <h3 data-en="Custom Gym & Plates" data-zh="精准器材与 0.5kg 配重"></h3>
+                <p data-en="Register your gym's machines and weight plate increments (down to 0.5kg). AI plans will always match what you have."
+                   data-zh="登记健身房真实器械与精确到 0.5kg 的个性化重量档位，杜绝 AI 生成无法落地的器械与荒谬重量。"></p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">⏱️</span>
+                <h3 data-en="Dynamic Island & Live Activities" data-zh="灵动岛与实时活动"></h3>
+                <p data-en="Keep your iPhone in your pocket. Glance at rest timers, target reps, and next exercises directly on the Lock Screen."
+                   data-zh="训练无需频繁解锁屏幕。在灵动岛与锁屏上实时掌控组间休息倒计时、目标次数与下一组动作。"></p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">⌚️</span>
+                <h3 data-en="Apple Watch Companion" data-zh="Apple Watch 伴侣训练"></h3>
+                <p data-en="Wrist-first tracking. Adjust weights and reps with the Digital Crown, monitor real-time heart rate zones, and feel haptic rest alerts."
+                   data-zh="手腕独立记录，旋转数码表冠微调次数与重量，实时心率区间监测，休息结束轻触手腕震动提醒。"></p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">📊</span>
+                <h3 data-en="Volume & Shareable Cards" data-zh="容量分析与打卡战报"></h3>
+                <p data-en="Automatic tonnage calculation, muscle group distribution, and stylish report cards with fun metaphors to share with friends."
+                   data-zh="自动计算累计推举吨位与肌群容量分布，一键生成带有生活化趣味物料比喻的精致打卡战报图片。"></p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🔒</span>
+                <h3 data-en="Privacy & Local First" data-zh="本地优先与纯粹隐私"></h3>
+                <p data-en="Zero ads, zero commercial tracking SDKs. Your training data lives securely on your device and your private Apple CloudKit."
+                   data-zh="零广告、零第三方追踪 SDK。所有个人锻炼数据加密保存在本机沙盒与属于你个人的苹果私有 CloudKit 云端。"></p>
+            </div>
+        </div>
+
+        <!-- Membership -->
+        <h2 data-en="Trainko Premium" data-zh="Trainko 会员特权"></h2>
+        <div class="premium-card">
+            <h3 data-en="👑 Upgrade to Trainko Premium" data-zh="👑 升级为 Trainko 会员"></h3>
+            <p data-en="Unlock all pro training tools designed for serious lifters:" data-zh="解锁为进阶举铁与力量训练者打造的全套专业工具："></p>
+            <ul>
+                <li data-en="Full Training History: Access and review workouts beyond the rolling 14-day window" data-zh="完整训练历史：浏览与复盘滚动 14 天以外的全部历史计划与记录"></li>
+                <li data-en="Multiple Gyms: Manage custom equipment setups for home, office, and commercial gyms" data-zh="多个健身房：为居家、公司和商业健身房分别管理器材与配重"></li>
+                <li data-en="Apple Watch Workout: Standalone wrist logging with heart rate zone guidance" data-zh="Apple Watch 伴侣：手腕独立记录组数与心率区间指引"></li>
+                <li data-en="iCloud Multi-Device Sync: Seamless silent data synchronization across Apple devices" data-zh="多设备 iCloud 云同步：跨 iPhone、iPad 等多端设备静默同步"></li>
+                <li data-en="Data Backup & Export: Encrypted local backup files (.tkbk) to own your data forever" data-zh="加密数据导入导出：导出本地加密备份文件（.tkbk），数据永不丢失"></li>
+            </ul>
+        </div>
+
+        <!-- Support -->
         <h2 data-en="Support" data-zh="技术支持"></h2>
         <p data-en="Need help with Trainko? We're here for you." data-zh="使用 Trainko 遇到问题？我们随时为你服务。"></p>
 
@@ -28,40 +118,42 @@
             <a class="contact-email" href="mailto:trainko.app@gmail.com">trainko.app@gmail.com</a>
         </div>
 
+        <!-- FAQ -->
         <h2 data-en="FAQ" data-zh="常见问题"></h2>
 
         <div class="card">
-            <h3 data-en="How does Trainko work?" data-zh="Trainko 是如何工作的？"></h3>
-            <p data-en="Trainko provides an API that any AI agent (ChatGPT, Claude, Workbuddy, Coze, etc.) can call to create personalized training plans. The app handles workout execution, timing, and tracking — AI handles the planning."
-               data-zh="Trainko 提供 API 接口，任何 AI 助手（ChatGPT、Claude、Workbuddy、Coze 等）都可以通过 API 创建个性化训练计划。App 负责训练引导、计时和记录，AI 负责规划。"></p>
+            <h3 data-en="How do I manage or cancel my subscription?" data-zh="如何管理或取消会员订阅？"></h3>
+            <p data-en="All subscriptions are billed through Apple App Store (StoreKit 2). You can manage or cancel your subscription anytime via iOS Settings → [Your Apple ID] → Subscriptions → Trainko, or via 'Manage Subscriptions' inside the App. To avoid being charged, cancel at least 24 hours before your billing cycle ends."
+               data-zh="所有会员订阅均通过 Apple App Store（StoreKit 2）进行扣费与管理。你可以随时在 iOS「系统设置 → 顶部 Apple ID → 订阅 → Trainko」或 App 内会员充值页底部的「管理订阅」中取消或更改方案。如需取消，请在当前周期结束前至少 24 小时操作。"></p>
         </div>
 
         <div class="card">
-            <h3 data-en="Do I need an account?" data-zh="需要注册账号吗？"></h3>
-            <p data-en="No. Trainko works entirely on-device. All your training data is stored locally on your iPhone. No registration or cloud account required."
-               data-zh="不需要。Trainko 完全在设备本地运行，所有训练数据保存在你的 iPhone 上，无需注册或云账号。"></p>
+            <h3 data-en="Do I need an account? Where is my data stored?" data-zh="需要注册账号吗？数据保存在哪里？"></h3>
+            <p data-en="No account is required. Trainko follows a strict local-first architecture. All your training records, gym setups, and profile metrics are stored securely on your iPhone. For Premium members who enable iCloud Sync, data is synced directly via Apple CloudKit in your personal private database — no developer server ever sees your data."
+               data-zh="完全不需要注册账号。Trainko 严格遵循本地优先原则，所有训练记录、健身房配置和个人身体档案均保存在你的 iPhone 本地。开通会员并开启 iCloud 云同步后，数据直接通过苹果私有 CloudKit 数据库跨设备同步，开发者绝无中心化用户服务器。"></p>
         </div>
 
         <div class="card">
-            <h3 data-en="Does Apple Watch work without iPhone?" data-zh="Apple Watch 可以脱离 iPhone 使用吗？"></h3>
-            <p data-en="Currently, Apple Watch acts as a companion to your iPhone. It needs to be paired with an iPhone running Trainko to display and control workouts."
-               data-zh="目前 Apple Watch 作为 iPhone 的伴侣设备使用，需要与安装了 Trainko 的 iPhone 配对才能显示和控制训练。"></p>
+            <h3 data-en="Can I turn off the local HTTP API service?" data-zh="可以关闭本地 HTTP API 服务吗？"></h3>
+            <p data-en="Yes. You can toggle the local API service on or off anytime in Settings → API Service. When turned off, the local HTTP server shuts down completely, preserving privacy and battery."
+               data-zh="可以。你随时可以在 App「设置 → API 服务」中一键开启或关闭本地 API 服务。关闭后本地 HTTP 服务将彻底停止监听，充分保护隐私与电量。"></p>
         </div>
 
         <div class="card">
             <h3 data-en="Which AI agents are supported?" data-zh="支持哪些 AI 助手？"></h3>
-            <p data-en="Any AI agent that can make HTTP API calls — including ChatGPT (via Actions/GPTs), Claude (via MCP/tools), Workbuddy, Coze, custom bots, and more."
-               data-zh="任何能发起 HTTP API 调用的 AI 助手都支持，包括 ChatGPT（通过 Actions/GPTs）、Claude（通过 MCP/tools）、Workbuddy、Coze、自定义 Bot 等。"></p>
+            <p data-en="Any AI agent that can make HTTP calls — including ChatGPT (via Actions/GPTs), Claude (via MCP/Tools), Workbuddy, Coze, custom OpenAI-compatible agents, and local scripts."
+               data-zh="任何支持 HTTP 请求的 AI 助手均可连接，包括 ChatGPT（通过 Actions/GPTs）、Claude（通过 MCP/Tools）、Workbuddy、Coze、自定义 Agent 以及本地运行的脚本。"></p>
         </div>
 
         <div class="card">
             <h3 data-en="What languages are supported?" data-zh="支持哪些语言？"></h3>
             <p data-en="17 languages: English, 简体中文, 繁體中文, 日本語, 한국어, Español, Français, Deutsch, Italiano, Português (BR), Русский, العربية, Čeština, Magyar, Polski, Türkçe, Español (LA)."
-               data-zh="17 种语言：简体中文、English、繁體中文、日本語、한국어、Español、Français、Deutsch、Italiano、Português (BR)、Русский、العربية、Čeština、Magyar、Polski、Türkçe、Español (LA)。"></p>
+               data-zh="17 种国际化语言：简体中文、English、繁體中文、日本語、한국어、Español、Français、Deutsch、Italiano、Português (BR)、Русский、العربية、Čeština、Magyar、Polski、Türkçe、Español (LA)。"></p>
         </div>
 
         <div class="divider"></div>
 
+        <!-- Legal -->
         <h2 data-en="Legal" data-zh="法律条款"></h2>
 
         <div class="card">
@@ -80,8 +172,8 @@
             </div>
         </div>
 
-        <p data-en="Trainko respects your privacy. All training data is stored locally on your device. No accounts, no cloud, no tracking."
-           data-zh="Trainko 尊重你的隐私。所有训练数据保存在设备本地，无需账号，无云端存储，无任何追踪。"></p>
+        <p data-en="Trainko respects your privacy. All training data is stored locally on your device. No ads, no trackers, no centralized data collection."
+           data-zh="Trainko 严格尊重你的隐私。训练数据保存在设备本地，无广告、无第三方追踪、无中心化服务器数据收集。"></p>
 
         <div class="footer">
             <p>&copy; 2024–2026 Trainko. All rights reserved.</p>

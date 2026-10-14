@@ -12,83 +12,145 @@
 
         <div class="legal-header">
             <h1>Privacy Policy</h1>
-            <p class="meta">Last updated: September 22, 2026</p>
+            <p class="meta">Last updated: October 15, 2026</p>
         </div>
 
         <div class="section">
             <h2>1. Introduction</h2>
-            <p>Welcome to <strong>Trainko</strong> ("the App"). We take your privacy and personal data protection very seriously. This Privacy Policy explains how we collect, use, store, and protect your information when you use the App and its local HTTP service.</p>
-            <p>Please read this policy carefully. By using the App, you acknowledge that you have read and agree to the terms of this policy. If you have any questions, please contact us (see Section 9).</p>
+            <p>
+                Welcome to <strong>Trainko</strong> (hereinafter referred to as "the App"). We are firmly committed to protecting your privacy and personal data.
+                This Privacy Policy explains how we handle, store, and safeguard your personal information when you use the App, its local HTTP service, Apple HealthKit integration, Apple Watch companion app, Live Activities and Widgets, iCloud sync, and membership subscription services.
+            </p>
+            <p>
+                Please read this Privacy Policy carefully. By using the App, you acknowledge that you have read and agreed to all provisions described herein.
+            </p>
         </div>
 
         <div class="section">
             <h2>2. Information We Process</h2>
-            <p>The App is designed with a "local-first" principle. The vast majority of your data is stored only on your device and is never uploaded to any cloud server.</p>
+            <p>
+                The App follows a strict "local-first, data-minimization" architecture. Unless you explicitly enable multi-device iCloud sync, all your fitness data is stored exclusively on your device and is never uploaded to any external proprietary server. The categories of data we process include:
+            </p>
 
-            <h3>2.1 Training &amp; Body Data</h3>
+            <h3>2.1 Training &amp; Fitness Profile Data</h3>
             <ul>
-                <li>Training plans, workout records, and exercise data entered by you or written by your AI Agent via API</li>
-                <li>Basic body information such as weight, height, sex, and date of birth</li>
-                <li>Training session data including duration, sets, reps, and weight</li>
+                <li>Daily workout plans, exercises, recorded sets, reps, weights, rest durations, and workout logs entered by you or created by your configured AI Agent via API;</li>
+                <li>Physical profile metrics, including biological sex, body weight, height, body fat percentage, and date of birth;</li>
+                <li>Customized gym equipment configurations and weight plate settings.</li>
             </ul>
 
-            <h3>2.2 Apple Health (HealthKit) Data</h3>
-            <p>When you enable "Auto Sync" and grant permission, the App interacts with Apple Health:</p>
+            <h3>2.2 Apple Health (HealthKit) &amp; Apple Watch Sensor Data</h3>
+            <p>
+                When you enable "Auto Sync" and grant authorization through the iOS system dialog, the App exchanges data with Apple Health and Apple Watch:
+            </p>
             <ul>
-                <li><strong>Read:</strong> Body weight, height, body fat percentage, heart rate, sex, and date of birth — to enhance your training profile</li>
-                <li><strong>Write:</strong> Body weight, active energy, heart rate, and workout records — to sync your training results back to Apple Health</li>
+                <li><strong>Read Access</strong>: Body weight, height, body fat percentage, heart rate, biological sex, and date of birth — used solely to personalize your workout metrics and display real-time heart rate zones;</li>
+                <li><strong>Write Access</strong>: Active energy (calories), workout heart rates, and workout sessions (HKWorkoutSession) — used to log your workout achievements into Apple Health;</li>
+                <li><strong>Apple Watch Companion Workouts</strong>: Heart rate and metric data collected during workouts on your Watch sync directly to your iPhone via WatchConnectivity or HealthKit. <strong>No data is ever routed through any developer-owned server</strong>.</li>
             </ul>
-            <p>All HealthKit access requires your explicit authorization. You can revoke access at any time in Settings → Privacy &amp; Security → Health.</p>
+            <p>
+                We strictly prohibit using your HealthKit data for advertising, marketing, or data broker sales. You can revoke or customize HealthKit permissions at any time via iOS <strong>Settings → Privacy &amp; Security → Health → Trainko</strong>.
+            </p>
+
+            <h3>2.3 Live Activities &amp; Widgets</h3>
+            <ul>
+                <li>During active workouts, the App utilizes ActivityKit to project exercise names, current sets, and rest timers onto the Dynamic Island and Lock Screen;</li>
+                <li>All status renderings take place entirely on-device, and Lock Screen visibility respects your system settings under iOS <strong>Settings → Face ID &amp; Passcode → Allow Access When Locked</strong>.</li>
+            </ul>
+
+            <h3>2.4 In-App Purchases &amp; Subscription Credentials</h3>
+            <p>
+                When you purchase a Trainko Membership, all financial transactions are processed directly by Apple App Store (StoreKit 2):
+            </p>
+            <ul>
+                <li>The App developer <strong>never collects, accesses, or stores your credit card numbers, bank details, billing address, or payment credentials</strong>;</li>
+                <li>The App only receives cryptographically signed JWS transaction tokens from Apple locally on your device to verify your subscription entitlements (such as active plan, expiration date, and auto-renewal status).</li>
+            </ul>
+
+            <h3>2.5 iCloud Multi-Device Sync (Members Only)</h3>
+            <p>
+                When you enable "iCloud Sync" as a member, your workout logs and configurations sync seamlessly between your Apple devices signed into the same Apple ID:
+            </p>
+            <ul>
+                <li>All data is stored directly in your personal <strong>Private CloudKit Database</strong> hosted by Apple;</li>
+                <li>Data in transit and at rest is secured by Apple's encryption standards. <strong>The App developer has no technical means to inspect, access, or decrypt your personal iCloud data</strong>;</li>
+                <li>You can disable iCloud sync at any time in the App settings.</li>
+            </ul>
         </div>
 
         <div class="section">
             <h2>3. Data Storage &amp; Security</h2>
             <ul>
-                <li><strong>Local Storage:</strong> Your training and body data is stored in a local SwiftData database on your device</li>
-                <li><strong>No Cloud Servers:</strong> The App does not have a cloud account system and does not upload your personal data to any third-party servers</li>
-                <li><strong>API Key:</strong> The API Key for local HTTP service authentication is generated and securely stored on your device, used only for communication between your AI Agent and the App</li>
-                <li><strong>Data Isolation:</strong> iCloud sync is not currently enabled. We do not proactively sync your data to iCloud</li>
+                <li><strong>On-Device Storage</strong>: Workout records and health data are persisted in a sandboxed SwiftData database on your local device. User preferences are stored in system UserDefaults;</li>
+                <li><strong>Zero Proprietary Cloud Servers</strong>: The App operates without a centralized user account system or remote database backend, eliminating the risk of centralized data breaches;</li>
+                <li><strong>API Key Isolation</strong>: The API Key used to authenticate your local AI Agent is stored securely in your device sandbox and never leaves your local network.</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>4. Local HTTP Service &amp; API Key</h2>
-            <p>The App includes a local HTTP service that runs only on your device, allowing your configured AI Agent to create personalized training plans via API.</p>
+            <h2>4. Local HTTP Service</h2>
+            <p>
+                The App includes a local HTTP service listening exclusively on the loopback interface (localhost) to communicate with your authorized AI Agent.
+            </p>
             <ul>
-                <li>The service listens on the local address only. An API Key is required for access</li>
-                <li>The API Key is used exclusively between your device and your AI Agent. Do not share it with others</li>
-                <li>If you suspect the key has been compromised, you can regenerate it at any time in Settings</li>
+                <li>API Key authentication is mandatory for all requests. Do not share your API Key with untrusted parties;</li>
+                <li>If you suspect your key has been compromised, you can regenerate a new key instantly in Settings, immediately invalidating the previous one;</li>
+                <li>You can turn off the local HTTP service at any time in Settings → API Service.</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>5. Third-Party Data Access</h2>
-            <p>Apart from Apple Health (HealthKit), the App does not integrate any third-party SDKs and does not provide your data to any third party for advertising, profiling, or any other commercial purpose.</p>
+            <h2>5. Workout Share Graphics &amp; Social Media</h2>
+            <p>
+                Workout cards and periodic achievement graphics are rendered entirely on your device. If you choose to save or share these graphics to third-party platforms, please be aware that they contain personal exercise indicators and historical data; such sharing is purely voluntary on your part.
+            </p>
         </div>
 
         <div class="section">
-            <h2>6. Data Deletion</h2>
+            <h2>6. Third-Party Sharing &amp; Trackers</h2>
+            <p>
+                In accordance with our privacy commitment:
+            </p>
             <ul>
-                <li>You can delete all data in Settings → Data Management → Clear All Data</li>
-                <li>Uninstalling the App also deletes all data on your device (Apple Health records are not affected)</li>
-                <li>To revoke Apple Health permissions, go to Settings → Privacy &amp; Security → Health</li>
+                <li>Aside from native Apple system frameworks (HealthKit, WatchConnectivity, ActivityKit, CloudKit, and StoreKit), <strong>the App contains zero third-party commercial advertising SDKs, tracking analytics, or behavioral profiling tools</strong>;</li>
+                <li>We never sell, rent, monetize, or disclose your personal fitness data to any third party.</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>7. Children's Privacy</h2>
-            <p>The App is designed for general adult fitness use. If you are under 18, please use the App under the guidance of a guardian and ensure that you have obtained their consent.</p>
+            <h2>7. Data Subject Rights</h2>
+            <p>
+                You retain complete sovereignty over your information:
+            </p>
+            <ul>
+                <li><strong>Access and Correction</strong>: You can view or adjust all personal profiles, gym setups, and workout logs inside the App at any time;</li>
+                <li><strong>Deletion</strong>: Swipe left to delete individual workout entries, or erase all data at once via Settings;</li>
+                <li><strong>Portability &amp; Backup</strong>: Premium members can export all training data to an encrypted local backup file (.tkbk).</li>
+            </ul>
         </div>
 
         <div class="section">
-            <h2>8. Changes to This Policy</h2>
-            <p>We may update this policy from time to time. Updated policies will be published within the App and take effect from the date of publication. We recommend reviewing this policy periodically.</p>
+            <h2>8. Children's Privacy</h2>
+            <p>
+                The App is intended for adult fitness enthusiasts capable of safely undertaking physical exercises. If you are under 18, please use the App only under the supervision of a parent or legal guardian.
+            </p>
         </div>
 
         <div class="section">
-            <h2>9. Contact Us</h2>
-            <p>If you have any questions, comments, or suggestions regarding this Privacy Policy, please contact us at:</p>
-            <p><a class="contact-email" href="mailto:trainko.app@gmail.com">trainko.app@gmail.com</a></p>
+            <h2>9. Changes to this Policy</h2>
+            <p>
+                We may periodically update this Privacy Policy. The latest version will always be published inside the App and on our official support page, marked with its effective date.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>10. Contact Us</h2>
+            <p>
+                If you have any questions or feedback regarding this Privacy Policy, please contact us at:
+            </p>
+            <p>
+                Email: <a href="mailto:trainko.app@gmail.com">trainko.app@gmail.com</a>
+            </p>
         </div>
 
         <div class="footer">
