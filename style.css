@@ -72,22 +72,28 @@ body {
   border-radius: 10px;
   border: 1px solid var(--border);
 }
-.lang-switch a {
+.lang-switch a,
+.lang-switch button {
   display: block;
   padding: 4px 12px;
   font-size: 13px;
   font-weight: 500;
+  font-family: inherit;
   color: var(--text-tertiary);
+  background: none;
+  border: none;
   text-decoration: none;
   border-radius: 7px;
   transition: all 0.2s;
   cursor: pointer;
 }
-.lang-switch a.active {
+.lang-switch a.active,
+.lang-switch button.active {
   color: var(--text);
   background: var(--surface-hover);
 }
-.lang-switch a:hover { color: var(--text-secondary); }
+.lang-switch a:hover,
+.lang-switch button:hover { color: var(--text-secondary); }
 
 /* Headings */
 h2 {
@@ -280,6 +286,17 @@ ul li::before {
   color: var(--accent);
   border-color: rgba(255, 107, 53, 0.3);
   background: rgba(255, 107, 53, 0.1);
+}
+
+/* App Store download badge */
+.app-store-badge {
+  display: inline-block;
+  margin-top: 22px;
+}
+.app-store-badge img {
+  height: 48px;
+  width: auto;
+  display: block;
 }
 
 /* Step cards */

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trainko — Let AI plan, you train.</title>
+    <title>Trainko — AI 负责想 · 你负责练</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="lang-switch">
-        <a href="index.html" class="active" id="btn-en">EN</a>
-        <a href="index-zh.html" id="btn-zh">中文</a>
+        <button type="button" id="btn-en" onclick="applyLang('en')">EN</button>
+        <button type="button" id="btn-zh" class="active" onclick="applyLang('zh')">中文</button>
     </div>
 
     <div class="container">
@@ -17,152 +17,313 @@
         <div class="header">
             <span class="icon">🏋️</span>
             <h1>Trainko</h1>
-            <p class="tagline">Let AI plan, you train.</p>
+            <p class="tagline" data-i18n="tagline">AI 负责想 · 你负责练</p>
             <div class="hero-badges">
-                <span class="badge accent">🤖 Open Local API</span>
-                <span class="badge">🔒 Local First &amp; Private</span>
-                <span class="badge">⌚️ Apple Watch Companion</span>
-                <span class="badge">🌍 17 Languages</span>
+                <span class="badge accent" data-i18n="badge1">🤖 开放本地 API</span>
+                <span class="badge" data-i18n="badge2">🔒 本地优先 · 纯粹隐私</span>
+                <span class="badge" data-i18n="badge3">⌚️ Apple Watch 独立伴侣</span>
+                <span class="badge" data-i18n="badge4">🌍 17 种语言原生支持</span>
             </div>
+            <a class="app-store-badge" href="https://apps.apple.com/us/app/trainko/id6814859557" target="_blank" rel="noopener">
+                <img id="appStoreBadgeImg" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/zh-cn?size=250x83" alt="在 App Store 下载 Trainko">
+            </a>
         </div>
 
         <!-- How it works -->
-        <h2>How It Works</h2>
+        <h2 data-i18n="howTitle">工作原理</h2>
         <div class="step-item">
             <div class="step-number">1</div>
             <div class="step-content">
-                <h3>Connect Any AI Agent</h3>
-                <p>Connect your preferred AI Agent to Trainko's built-in local HTTP API.</p>
+                <h3 data-i18n="s1h">连接任意 AI Agent</h3>
+                <p data-i18n="s1p">将你的 AI Agent 连接至 Trainko 内置的轻量本地 HTTP API。</p>
             </div>
         </div>
         <div class="step-item">
             <div class="step-number">2</div>
             <div class="step-content">
-                <h3>Receive Tailored Daily Plans</h3>
-                <p>Your AI generates executable workouts tailored to your exact gym equipment, progressive overload targets, and recovery state.</p>
+                <h3 data-i18n="s2h">接收专属定制计划</h3>
+                <p data-i18n="s2p">AI 助手根据你的实际健身房器械条件、负荷目标和体能恢复状态，通过 API 下发 100% 可落地的专业训练计划。</p>
             </div>
         </div>
         <div class="step-item">
             <div class="step-number">3</div>
             <div class="step-content">
-                <h3>Focus on Every Push</h3>
-                <p>Trainko handles the rest: immersive set guidance, auto rest countdowns, Lock Screen Live Activities, and Apple Watch companion logging.</p>
+                <h3 data-i18n="s3h">沉浸执行，专注推举</h3>
+                <p data-i18n="s3p">Trainko 负责后续的一切：沉浸式动作指导、自动组间间歇计时、灵动岛锁屏实时活动以及 Apple Watch 手腕记录。</p>
             </div>
         </div>
 
         <!-- Core Features -->
-        <h2>Core Features</h2>
+        <h2 data-i18n="featTitle">核心特性</h2>
         <div class="grid-2">
             <div class="feature-card">
                 <span class="feature-icon">🔌</span>
-                <h3>Open Local API</h3>
-                <p>Built-in on-device server. Any HTTP-capable AI assistant can create daily plans, log workouts, and query stats with ease.</p>
+                <h3 data-i18n="f1h">开放本地 HTTP API</h3>
+                <p data-i18n="f1p">内置设备级本地 HTTP 服务器。任何具备 HTTP 能力的 AI 均可一键读取与写入每日计划，并在设置中支持随时启停。</p>
             </div>
             <div class="feature-card">
                 <span class="feature-icon">🏋️‍♂️</span>
-                <h3>Custom Gym &amp; Plates</h3>
-                <p>Register your gym's machines and weight plate increments (down to 0.5kg). AI plans will always match what you have.</p>
+                <h3 data-i18n="f2h">精准器材与 0.5kg 配重</h3>
+                <p data-i18n="f2p">登记健身房真实器械与精确到 0.5kg 的个性化重量档位，杜绝 AI 生成无法落地的器械与荒谬重量。</p>
             </div>
             <div class="feature-card">
                 <span class="feature-icon">⏱️</span>
-                <h3>Dynamic Island &amp; Live Activities</h3>
-                <p>Keep your iPhone in your pocket. Glance at rest timers, target reps, and next exercises directly on the Lock Screen.</p>
+                <h3 data-i18n="f3h">灵动岛与实时活动</h3>
+                <p data-i18n="f3p">训练无需频繁解锁屏幕。在灵动岛与锁屏上实时掌控组间休息倒计时、目标次数与下一组动作。</p>
             </div>
             <div class="feature-card">
                 <span class="feature-icon">⌚️</span>
-                <h3>Apple Watch Companion</h3>
-                <p>Wrist-first tracking. Adjust weights and reps with the Digital Crown, monitor real-time heart rate zones, and feel haptic rest alerts.</p>
+                <h3 data-i18n="f4h">Apple Watch 伴侣训练</h3>
+                <p data-i18n="f4p">手腕独立记录，旋转数码表冠微调次数与重量，实时心率区间监测，休息结束轻触手腕震动提醒。</p>
             </div>
             <div class="feature-card">
                 <span class="feature-icon">📊</span>
-                <h3>Volume &amp; Shareable Cards</h3>
-                <p>Automatic tonnage calculation, muscle group distribution, and stylish report cards with fun metaphors to share with friends.</p>
+                <h3 data-i18n="f5h">容量分析与打卡战报</h3>
+                <p data-i18n="f5p">自动计算累计推举吨位与肌群容量分布，一键生成带有生活化趣味物料比喻的精致打卡战报图片。</p>
             </div>
             <div class="feature-card">
                 <span class="feature-icon">🔒</span>
-                <h3>Privacy &amp; Local First</h3>
-                <p>Zero ads, zero commercial tracking SDKs. Your training data lives securely on your device and your private Apple CloudKit.</p>
+                <h3 data-i18n="f6h">本地优先与纯粹隐私</h3>
+                <p data-i18n="f6p">零广告、零第三方追踪 SDK。所有个人锻炼数据加密保存在本机沙盒与属于你个人的苹果私有 CloudKit 云端。</p>
             </div>
         </div>
 
         <!-- Membership -->
-        <h2>Trainko Premium</h2>
+        <h2 data-i18n="premTitle">Trainko 会员特权</h2>
         <div class="premium-card">
-            <h3>👑 Upgrade to Trainko Premium</h3>
-            <p>Unlock all pro training tools designed for serious lifters:</p>
+            <h3 data-i18n="premH">👑 升级为 Trainko 会员</h3>
+            <p data-i18n="premP">解锁为进阶举铁与力量训练者打造的全套专业工具：</p>
             <ul>
-                <li>Full Training History: Access and review workouts beyond the rolling 14-day window</li>
-                <li>Multiple Gyms: Manage custom equipment setups for home, office, and commercial gyms</li>
-                <li>Apple Watch Workout: Standalone wrist logging with heart rate zone guidance</li>
-                <li>iCloud Multi-Device Sync: Seamless silent data synchronization across Apple devices</li>
-                <li>Data Backup &amp; Export: Encrypted local backup files (.tkbk) to own your data forever</li>
+                <li data-i18n="premLi1">完整训练历史：浏览与复盘滚动 14 天以外的全部历史计划与记录</li>
+                <li data-i18n="premLi2">多个健身房：为居家、公司和商业健身房分别管理器材与配重</li>
+                <li data-i18n="premLi3">Apple Watch 伴侣：手腕独立记录组数与心率区间指引</li>
+                <li data-i18n="premLi4">多设备 iCloud 云同步：跨 iPhone、iPad 等多端设备静默同步</li>
+                <li data-i18n="premLi5">加密数据导入导出：导出本地加密备份文件（.tkbk），数据永不丢失</li>
             </ul>
         </div>
 
         <!-- Support -->
-        <h2>Support</h2>
-        <p>Need help with Trainko? We're here for you.</p>
+        <h2 data-i18n="supTitle">技术支持</h2>
+        <p data-i18n="supP">使用 Trainko 遇到问题？我们随时为你服务。</p>
 
         <div class="card">
-            <h3>📧 Contact Us</h3>
-            <p>Technical support, bug reports, or feature requests:</p>
+            <h3 data-i18n="contactH">📧 联系我们</h3>
+            <p data-i18n="contactP">技术支持、问题反馈或功能建议：</p>
             <a class="contact-email" href="mailto:trainko.support@gmail.com">trainko.support@gmail.com</a>
         </div>
 
         <!-- FAQ -->
-        <h2>FAQ</h2>
+        <h2 data-i18n="faqTitle">常见问题</h2>
 
         <div class="card">
-            <h3>How do I manage or cancel my subscription?</h3>
-            <p>All subscriptions are billed through Apple App Store (StoreKit 2). You can manage or cancel your subscription anytime via iOS Settings → [Your Apple ID] → Subscriptions → Trainko, or via 'Manage Subscriptions' inside the App. To avoid being charged, cancel at least 24 hours before your billing cycle ends.</p>
+            <h3 data-i18n="q1h">如何管理或取消会员订阅？</h3>
+            <p data-i18n="q1p">所有会员订阅均通过 Apple App Store（StoreKit 2）进行扣费与管理。你可以随时在 iOS「系统设置 → 顶部 Apple ID → 订阅 → Trainko」或 App 内会员充值页底部的「管理订阅」中取消或更改方案。如需取消，请在当前周期结束前至少 24 小时操作。</p>
         </div>
 
         <div class="card">
-            <h3>Do I need an account? Where is my data stored?</h3>
-            <p>No account is required. Trainko follows a strict local-first architecture. All your training records, gym setups, and profile metrics are stored securely on your iPhone. For Premium members who enable iCloud Sync, data is synced directly via Apple CloudKit in your personal private database — no developer server ever sees your data.</p>
+            <h3 data-i18n="q2h">需要注册账号吗？数据保存在哪里？</h3>
+            <p data-i18n="q2p">完全不需要注册账号。Trainko 严格遵循本地优先原则，所有训练记录、健身房配置和个人身体档案均保存在你的 iPhone 本地。开通会员并开启 iCloud 云同步后，数据直接通过苹果私有 CloudKit 数据库跨设备同步，开发者绝无中心化用户服务器。</p>
         </div>
 
         <div class="card">
-            <h3>Can I turn off the local HTTP API service?</h3>
-            <p>Yes. You can toggle the local API service on or off anytime in Settings → API Service. When turned off, the local HTTP server shuts down completely, preserving privacy and battery.</p>
+            <h3 data-i18n="q3h">可以关闭本地 HTTP API 服务吗？</h3>
+            <p data-i18n="q3p">可以。你随时可以在 App「设置 → API 服务」中一键开启或关闭本地 API 服务。关闭后本地 HTTP 服务将彻底停止监听，充分保护隐私与电量。</p>
         </div>
 
         <div class="card">
-            <h3>Which AI agents are supported?</h3>
-            <p>Any AI Agent that can make HTTP requests — including desktop AI agents, custom automation workflows, and local scripts.</p>
+            <h3 data-i18n="q4h">支持哪些 AI Agent？</h3>
+            <p data-i18n="q4p">任何支持 HTTP 请求的 AI Agent 均可连接，包括桌面端智能体、自定义工作流以及本地运行的脚本。</p>
         </div>
 
         <div class="card">
-            <h3>What languages are supported?</h3>
-            <p>17 languages: English, 简体中文, 繁體中文, 日本語, 한국어, Español, Français, Deutsch, Italiano, Português (BR), Русский, العربية, Čeština, Magyar, Polski, Türkçe, Español (LA).</p>
+            <h3 data-i18n="q5h">支持哪些语言？</h3>
+            <p data-i18n="q5p">17 种国际化语言：简体中文、English、繁體中文、日本語、한국어、Español、Français、Deutsch、Italiano、Português (BR)、Русский、العربية、Čeština、Magyar、Polski、Türkçe、Español (LA)。</p>
         </div>
 
         <div class="divider"></div>
 
         <!-- Legal -->
-        <h2>Legal</h2>
+        <h2 data-i18n="legalTitle">法律条款</h2>
 
         <div class="card">
-            <h3>📄 Privacy Policy</h3>
+            <h3 data-i18n="privacyH">📄 隐私政策</h3>
             <div class="legal-links">
-                <a href="privacy.html">English</a>
-                <a href="privacy-zh.html">中文</a>
+                <a id="link-privacy" href="privacy.html?lang=zh" data-i18n="privacyLink">查看全文</a>
             </div>
         </div>
 
         <div class="card">
-            <h3>📋 Terms of Service</h3>
+            <h3 data-i18n="termsH">📋 用户协议</h3>
             <div class="legal-links">
-                <a href="agreement.html">English</a>
-                <a href="agreement-zh.html">中文</a>
+                <a id="link-agreement" href="agreement.html?lang=zh" data-i18n="termsLink">查看全文</a>
             </div>
         </div>
 
-        <p>Trainko respects your privacy. All training data is stored locally on your device. No ads, no trackers, no centralized data collection.</p>
+        <p data-i18n="privacyNote">Trainko 严格尊重你的隐私。训练数据保存在设备本地，无广告、无第三方追踪、无中心化服务器数据收集。</p>
 
         <div class="footer">
             <p>&copy; 2026 Trainko. All rights reserved.</p>
         </div>
     </div>
+
+    <script>
+    // 语言字典：默认值（HTML 内中文）在 JS 不可用时即为中文版
+    var I18N = {
+        zh: {
+            title: "Trainko — AI 负责想 · 你负责练",
+            appStoreAlt: "在 App Store 下载 Trainko",
+            tagline: "AI 负责想 · 你负责练",
+            badge1: "🤖 开放本地 API",
+            badge2: "🔒 本地优先 · 纯粹隐私",
+            badge3: "⌚️ Apple Watch 独立伴侣",
+            badge4: "🌍 17 种语言原生支持",
+            howTitle: "工作原理",
+            s1h: "连接任意 AI Agent",
+            s1p: "将你的 AI Agent 连接至 Trainko 内置的轻量本地 HTTP API。",
+            s2h: "接收专属定制计划",
+            s2p: "AI 助手根据你的实际健身房器械条件、负荷目标和体能恢复状态，通过 API 下发 100% 可落地的专业训练计划。",
+            s3h: "沉浸执行，专注推举",
+            s3p: "Trainko 负责后续的一切：沉浸式动作指导、自动组间间歇计时、灵动岛锁屏实时活动以及 Apple Watch 手腕记录。",
+            featTitle: "核心特性",
+            f1h: "开放本地 HTTP API",
+            f1p: "内置设备级本地 HTTP 服务器。任何具备 HTTP 能力的 AI 均可一键读取与写入每日计划，并在设置中支持随时启停。",
+            f2h: "精准器材与 0.5kg 配重",
+            f2p: "登记健身房真实器械与精确到 0.5kg 的个性化重量档位，杜绝 AI 生成无法落地的器械与荒谬重量。",
+            f3h: "灵动岛与实时活动",
+            f3p: "训练无需频繁解锁屏幕。在灵动岛与锁屏上实时掌控组间休息倒计时、目标次数与下一组动作。",
+            f4h: "Apple Watch 伴侣训练",
+            f4p: "手腕独立记录，旋转数码表冠微调次数与重量，实时心率区间监测，休息结束轻触手腕震动提醒。",
+            f5h: "容量分析与打卡战报",
+            f5p: "自动计算累计推举吨位与肌群容量分布，一键生成带有生活化趣味物料比喻的精致打卡战报图片。",
+            f6h: "本地优先与纯粹隐私",
+            f6p: "零广告、零第三方追踪 SDK。所有个人锻炼数据加密保存在本机沙盒与属于你个人的苹果私有 CloudKit 云端。",
+            premTitle: "Trainko 会员特权",
+            premH: "👑 升级为 Trainko 会员",
+            premP: "解锁为进阶举铁与力量训练者打造的全套专业工具：",
+            premLi1: "完整训练历史：浏览与复盘滚动 14 天以外的全部历史计划与记录",
+            premLi2: "多个健身房：为居家、公司和商业健身房分别管理器材与配重",
+            premLi3: "Apple Watch 伴侣：手腕独立记录组数与心率区间指引",
+            premLi4: "多设备 iCloud 云同步：跨 iPhone、iPad 等多端设备静默同步",
+            premLi5: "加密数据导入导出：导出本地加密备份文件（.tkbk），数据永不丢失",
+            supTitle: "技术支持",
+            supP: "使用 Trainko 遇到问题？我们随时为你服务。",
+            contactH: "📧 联系我们",
+            contactP: "技术支持、问题反馈或功能建议：",
+            faqTitle: "常见问题",
+            q1h: "如何管理或取消会员订阅？",
+            q1p: "所有会员订阅均通过 Apple App Store（StoreKit 2）进行扣费与管理。你可以随时在 iOS「系统设置 → 顶部 Apple ID → 订阅 → Trainko」或 App 内会员充值页底部的「管理订阅」中取消或更改方案。如需取消，请在当前周期结束前至少 24 小时操作。",
+            q2h: "需要注册账号吗？数据保存在哪里？",
+            q2p: "完全不需要注册账号。Trainko 严格遵循本地优先原则，所有训练记录、健身房配置和个人身体档案均保存在你的 iPhone 本地。开通会员并开启 iCloud 云同步后，数据直接通过苹果私有 CloudKit 数据库跨设备同步，开发者绝无中心化用户服务器。",
+            q3h: "可以关闭本地 HTTP API 服务吗？",
+            q3p: "可以。你随时可以在 App「设置 → API 服务」中一键开启或关闭本地 API 服务。关闭后本地 HTTP 服务将彻底停止监听，充分保护隐私与电量。",
+            q4h: "支持哪些 AI Agent？",
+            q4p: "任何支持 HTTP 请求的 AI Agent 均可连接，包括桌面端智能体、自定义工作流以及本地运行的脚本。",
+            q5h: "支持哪些语言？",
+            q5p: "17 种国际化语言：简体中文、English、繁體中文、日本語、한국어、Español、Français、Deutsch、Italiano、Português (BR)、Русский、العربية、Čeština、Magyar、Polski、Türkçe、Español (LA)。",
+            legalTitle: "法律条款",
+            privacyH: "📄 隐私政策",
+            privacyLink: "查看全文",
+            termsH: "📋 用户协议",
+            termsLink: "查看全文",
+            privacyNote: "Trainko 严格尊重你的隐私。训练数据保存在设备本地，无广告、无第三方追踪、无中心化服务器数据收集。"
+        },
+        en: {
+            title: "Trainko — Let AI plan, you train.",
+            appStoreAlt: "Download Trainko on the App Store",
+            tagline: "Let AI plan, you train.",
+            badge1: "🤖 Open Local API",
+            badge2: "🔒 Local First & Private",
+            badge3: "⌚️ Apple Watch Companion",
+            badge4: "🌍 17 Languages",
+            howTitle: "How It Works",
+            s1h: "Connect Any AI Agent",
+            s1p: "Connect your preferred AI Agent to Trainko's built-in local HTTP API.",
+            s2h: "Receive Tailored Daily Plans",
+            s2p: "Your AI generates executable workouts tailored to your exact gym equipment, progressive overload targets, and recovery state.",
+            s3h: "Focus on Every Push",
+            s3p: "Trainko handles the rest: immersive set guidance, auto rest countdowns, Lock Screen Live Activities, and Apple Watch companion logging.",
+            featTitle: "Core Features",
+            f1h: "Open Local API",
+            f1p: "Built-in on-device server. Any HTTP-capable AI assistant can create daily plans, log workouts, and query stats with ease.",
+            f2h: "Custom Gym & Plates",
+            f2p: "Register your gym's machines and weight plate increments (down to 0.5kg). AI plans will always match what you have.",
+            f3h: "Dynamic Island & Live Activities",
+            f3p: "Keep your iPhone in your pocket. Glance at rest timers, target reps, and next exercises directly on the Lock Screen.",
+            f4h: "Apple Watch Companion",
+            f4p: "Wrist-first tracking. Adjust weights and reps with the Digital Crown, monitor real-time heart rate zones, and feel haptic rest alerts.",
+            f5h: "Volume & Shareable Cards",
+            f5p: "Automatic tonnage calculation, muscle group distribution, and stylish report cards with fun metaphors to share with friends.",
+            f6h: "Privacy & Local First",
+            f6p: "Zero ads, zero commercial tracking SDKs. Your training data lives securely on your device and your private Apple CloudKit.",
+            premTitle: "Trainko Premium",
+            premH: "👑 Upgrade to Trainko Premium",
+            premP: "Unlock all pro training tools designed for serious lifters:",
+            premLi1: "Full Training History: Access and review workouts beyond the rolling 14-day window",
+            premLi2: "Multiple Gyms: Manage custom equipment setups for home, office, and commercial gyms",
+            premLi3: "Apple Watch Workout: Standalone wrist logging with heart rate zone guidance",
+            premLi4: "iCloud Multi-Device Sync: Seamless silent data synchronization across Apple devices",
+            premLi5: "Data Backup & Export: Encrypted local backup files (.tkbk) to own your data forever",
+            supTitle: "Support",
+            supP: "Need help with Trainko? We're here for you.",
+            contactH: "📧 Contact Us",
+            contactP: "Technical support, bug reports, or feature requests:",
+            faqTitle: "FAQ",
+            q1h: "How do I manage or cancel my subscription?",
+            q1p: "All subscriptions are billed through Apple App Store (StoreKit 2). You can manage or cancel your subscription anytime via iOS Settings → [Your Apple ID] → Subscriptions → Trainko, or via 'Manage Subscriptions' inside the App. To avoid being charged, cancel at least 24 hours before your billing cycle ends.",
+            q2h: "Do I need an account? Where is my data stored?",
+            q2p: "No account is required. Trainko follows a strict local-first architecture. All your training records, gym setups, and profile metrics are stored securely on your iPhone. For Premium members who enable iCloud Sync, data is synced directly via Apple CloudKit in your personal private database — no developer server ever sees your data.",
+            q3h: "Can I turn off the local HTTP API service?",
+            q3p: "Yes. You can toggle the local API service on or off anytime in Settings → API Service. When turned off, the local HTTP server shuts down completely, preserving privacy and battery.",
+            q4h: "Which AI agents are supported?",
+            q4p: "Any AI Agent that can make HTTP requests — including desktop AI agents, custom automation workflows, and local scripts.",
+            q5h: "What languages are supported?",
+            q5p: "17 languages: English, 简体中文, 繁體中文, 日本語, 한국어, Español, Français, Deutsch, Italiano, Português (BR), Русский, العربية, Čeština, Magyar, Polski, Türkçe, Español (LA).",
+            legalTitle: "Legal",
+            privacyH: "📄 Privacy Policy",
+            privacyLink: "Read more",
+            termsH: "📋 Terms of Service",
+            termsLink: "Read more",
+            privacyNote: "Trainko respects your privacy. All training data is stored locally on your device. No ads, no trackers, no centralized data collection."
+        }
+    };
+
+    // 语言选择优先级：URL ?lang= 参数 > 上次手动选择 > 浏览器语言（简/繁中文→中文，其余→英文）> 默认中文
+    function detectLang() {
+        var q = new URLSearchParams(window.location.search).get('lang');
+        if (q === 'zh' || q === 'en') return q;
+        try {
+            var saved = window.localStorage.getItem('trainko.lang');
+            if (saved === 'zh' || saved === 'en') return saved;
+        } catch (e) {}
+        // 只看浏览器首选语言：简/繁中文（zh 开头）→ 中文，其余语言 → 英文；拿不到语言信息时默认中文
+        var first = (navigator.language || '').toLowerCase();
+        if (first.indexOf('zh') === 0) return 'zh';
+        return first ? 'en' : 'zh';
+    }
+
+    function applyLang(lang) {
+        var dict = I18N[lang];
+        var nodes = document.querySelectorAll('[data-i18n]');
+        for (var i = 0; i < nodes.length; i++) {
+            var key = nodes[i].getAttribute('data-i18n');
+            if (dict[key]) nodes[i].textContent = dict[key];
+        }
+        document.title = dict.title;
+        document.documentElement.lang = (lang === 'zh') ? 'zh-CN' : 'en';
+        document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+        document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        document.getElementById('link-privacy').setAttribute('href', 'privacy.html?lang=' + lang);
+        document.getElementById('link-agreement').setAttribute('href', 'agreement.html?lang=' + lang);
+        var badgeImg = document.getElementById('appStoreBadgeImg');
+        badgeImg.setAttribute('src', 'https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/' + (lang === 'zh' ? 'zh-cn' : 'en-us') + '?size=250x83');
+        badgeImg.setAttribute('alt', dict.appStoreAlt);
+        try { window.localStorage.setItem('trainko.lang', lang); } catch (e) {}
+        var url = new URL(window.location.href);
+        url.searchParams.set('lang', lang);
+        window.history.replaceState(null, '', url.toString());
+    }
+
+    applyLang(detectLang());
+    </script>
 </body>
 </html>
